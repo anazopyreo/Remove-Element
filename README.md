@@ -28,7 +28,16 @@ for (int i = 0; i < actualLength; i++) {
 If all assertions pass, then your solution will be accepted.
 
 ## Intuition
+Since only the first k elements of nums will be evaluated, I don't need to change any element after the kth one.
+The simplest way to accomplish the task is to shuffle the elements that aren't being removed towards the front of the array.
 
 ## Approach
+1. Initiate a pointer i for writing values to the array
+2. Iterate through the array with a seperate pointer j
+3. Each time an int is encountered that does not need to be removed, it is placed at i and i is incremented
+4. Once iteration is finished, i is equal to the number of elements that did not get removed
+5. Return i
 
 ## Complexity
+  - Time Complexity: O(n) due to iterating through the array
+  - Space Complexity: O(1) since only memory is used for the pointers
